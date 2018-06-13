@@ -1,0 +1,36 @@
+html
+  head
+    title= title
+  body
+    table(border="1" width="50%" align="center")
+        tr
+            td(colspan="5" align="center") 信息管理
+        tr
+            td id
+            td name
+            td gender
+            td(colspan="2" align="center") operate
+        each val in list
+            tr
+                td #{val.id}
+                td #{val.name}
+                td #{val.gender}
+                td(align="center"): input(type="button", value="修改")
+                td(align="center"): input(type="button", value="删除")
+    br
+    br
+    table(border="0" width="50%" align="center")
+        tr
+            td id
+            td name
+            td gender
+        tr
+            td: input(type="text")
+            td: input(type="text")
+            td: input(type="text")
+            td: input(type="button", value="添加")
+        tr
+            td: input(type="text")
+            td: input(type="text")
+            td: input(type="text")
+            td: input(type="button", value="查询")
